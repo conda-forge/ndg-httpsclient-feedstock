@@ -14,9 +14,8 @@ Summary: Provides enhanced HTTPS support for httplib and urllib2 using PyOpenSSL
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/ndg-httpsclient-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ndg-httpsclient-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/ndg-httpsclient-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ndg-httpsclient-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/ndg-httpsclient-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/ndg-httpsclient-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/ndg-httpsclient-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/ndg-httpsclient-feedstock)
 
 Current release info
 ====================
