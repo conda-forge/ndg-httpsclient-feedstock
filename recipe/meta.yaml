@@ -1,8 +1,8 @@
 {% set name = "ndg-httpsclient" %}
 {% set pypi_name = "ndg_httpsclient" %}
-{% set version = "0.4.4" %}
+{% set version = "0.5.0" %}
 {% set hash_type = "sha256" %}
-{% set hash = "fba4d4798dcac2965874f24afb6631b4326baa4bd02505744d34f690c354856a" %}
+{% set hash = "c009f5430790936b3a97eaf9f968516664d97e146ab2bda991f0caadb7cc088b" %}
 
 package:
   name: {{ name|lower }}
