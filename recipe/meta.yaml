@@ -14,13 +14,13 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - ndg_httpclient = ndg.httpsclient.utils:main
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
