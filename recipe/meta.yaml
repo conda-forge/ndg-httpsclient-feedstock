@@ -1,7 +1,6 @@
 {% set name = "ndg-httpsclient" %}
 {% set pypi_name = "ndg_httpsclient" %}
 {% set version = "0.5.1" %}
-{% set hash_type = "sha256" %}
 {% set hash = "d72faed0376ab039736c2ba12e30695e2788c4aa569c9c3e3d72131de2592210" %}
 
 package:
@@ -9,26 +8,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ pypi_name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ pypi_name }}-{{ version }}.tar.gz
+  sha256: {{ hash }}
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 2
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - ndg_httpclient = ndg.httpsclient.utils:main
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - pyasn1
     - pyopenssl
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ndg
     - ndg.httpsclient
